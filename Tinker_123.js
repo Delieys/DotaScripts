@@ -185,8 +185,6 @@ var Tinker_Spammer;
         .GetValue();
     let menu_ComboKey = Menu.AddKeyBind(path, 'Key', Enum.ButtonCode.KEY_NONE)
         .SetNameLocale('ru', 'Бинд комбо');
-	let menu_SpamRocket = Menu.AddKeyBind(path, 'Key', Enum.ButtonCode.KEY_NONE)
-        .SetNameLocale('ru', 'Бинд спама ракет');
     let menu_CreepKey = Menu.AddKeyBind(path, 'Key Farm Creep', Enum.ButtonCode.KEY_NONE)
         .SetNameLocale('ru', 'Бинд фарма крипов')
         .SetTip('Will use shiva 3 times, not 4');

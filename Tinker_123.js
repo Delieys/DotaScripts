@@ -358,7 +358,7 @@ var Tinker_Spammer;
 					if (rocket && rocket.IsExist() && rocket.CanCast()) {
 						if (myHero.GetHeroesInRadius(1500, Enum.TeamType.TEAM_ENEMY).length > 0)						                       
                             rocket.CanCast() && rearm.CanCast();
-						if (myHero.GetHeroesInRadius(1500, Enum.TeamType.TEAM_ENEMY).length > 0) {
+						if (myHero.GetHeroesInRadius(1500, Enum.TeamType.TEAM_ENEMY).length <= 0) {
 							rocketUsed = false;
 							rearm = null;
 							iItem - null;	

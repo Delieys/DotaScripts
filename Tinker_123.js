@@ -282,7 +282,7 @@ var Tinker_Spammer;
                         }
                     }
                     let enemyInRadius = myHero.GetHeroesInRadius(2500 + addRadius, Enum.TeamType.TEAM_ENEMY).length;
-                    if ((menu_ComboKey.IsKeyDown() || (menu_CreepKey.IsKeyDown() && rocketFarm))) {
+                    if ((menu_ComboKey.IsKeyDown() || (menu_CreepKey.IsKeyDown() && rocketFarm) || menu_RocketSpam.IsKeyDown())) {
                         if ((rocket && rocket.IsExist() && rocket.CanCast())) {
                             if (enemyInRadius) {
                                 rocket.CastNoTarget();
@@ -355,7 +355,7 @@ var Tinker_Spammer;
                     }
                 }
 				if (menu_RocketSpam.isKeyDown()) {
-					if (rocket && rocket.IsExist()) {
+					if (rocket && rocket.IsExist() && rocket.CanCast()) {
                         if (enemyInRadius) {
                             rocket.CanCast() && rearm.CanCast();
                         }

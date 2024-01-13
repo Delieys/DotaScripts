@@ -361,6 +361,7 @@ var Tinker_Spammer;
 						else {
 							rocketUsed = false;
 							rearm = null;
+							iItem - null;	
 						}                    
                     }
 				}

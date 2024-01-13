@@ -92,15 +92,7 @@
   \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-/*asdasdddddddddddddd*/
->>>>>>> 20da062 (Обновление)
-=======
 /*asdasddddddddddddddddddddd*/
->>>>>>> 477effa (ddd)
 let T_spammer = {};
 var Tinker_Spammer;
 (function (Tinker_Spammer) {
@@ -364,15 +356,9 @@ var Tinker_Spammer;
                     }
                 }
 				if (menu_RocketSpam.isKeyDown()) {
-<<<<<<< HEAD
-					if (rocket && rocket.IsExist() && rocket.CanCast()) {
-                        if (enemyInRadius) {
-                            rocket.CastNoTarget() && rearm.CastNoTarget();
-=======
 					if (rocket && rocket.IsExist()) {
                         if (enemyInRadius) {
                             rocket.CanCast() && rearm.CanCast();
->>>>>>> 20da062 (Обновление)
                         }
                     }
 				}

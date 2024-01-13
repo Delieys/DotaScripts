@@ -355,9 +355,10 @@ var Tinker_Spammer;
                     }
                 }
 				if (menu_RocketSpam.isKeyDown()) {
-					if (rearm && rearm.IsExist() && rearm.CanCast() && !rearm.IsChannelling() && rocketUsed && !(blink && blink.IsExist() && CustomCanCast(blink))) {
+					let blink = GetBlink();
+                    if (rearm && rearm.IsExist() && rearm.CanCast() && !rearm.IsChannelling() && rocketUsed && !(blink && blink.IsExist() && CustomCanCast(blink))) {
                         rearm.CastNoTarget();
-					    }								                                                 				         
+                    }								                                                 				         
                     }
 				}
             }

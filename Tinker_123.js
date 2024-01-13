@@ -188,7 +188,8 @@ var Tinker_Spammer;
     let menu_CreepKey = Menu.AddKeyBind(path, 'Key Farm Creep', Enum.ButtonCode.KEY_NONE)
         .SetNameLocale('ru', 'Бинд фарма крипов')
         .SetTip('Will use shiva 3 times, not 4');
-	
+	let menu_RocketSpam = Menu.AddKeyBind(path, 'Key', Enum.ButtonCode.KEY_NONE)
+        .SetNameLocale('ru', 'Бинд спама ракет');
     let rocketFarm = Menu.AddToggle(path, 'Use Rockets with `Key Farm Creep`', false)
         .SetNameLocale('ru', 'Использовать ракеты с `Бинд фарма крипов`')
         .OnChange((state) => {
@@ -354,28 +355,9 @@ var Tinker_Spammer;
                     }
                 }
 				if (menu_RocketSpam.isKeyDown()) {
-					let blink = GetBlink();
-                    if (rearm && rearm.IsExist() && rearm.CanCast() && !rearm.IsChannelling() && rocketUsed && !(blink && blink.IsExist() && CustomCanCast(blink))) {
+                    if (rearm && rearm.IsExist() && rearm.CanCast() && !rearm.IsChannelling() && rocketUsed) {
                         rearm.CastNoTarget();
-                    }
-                    if (rearm.IsChannelling()) {
-                        let shiva = myHero.GetItem('item_shivas_guard', true);
-                        if (shiva && shiva.IsExist() && shiva.CanCast()) {
-                            if (useDoubleShiva) {
-                                setTimeout(() => {
-                                    if (shiva.CanCast())
-                                        shiva.CastNoTarget();
-                                }, 1000 * myHero.GetAbilityByIndex(5).GetLevelSpecialValueForFloat('AbilityChannelTime') - 300);
-                                setTimeout(() => {
-                                    if (shiva.CanCast())
-                                        shiva.CastNoTarget();
-                                }, 1000 * myHero.GetAbilityByIndex(5).GetLevelSpecialValueForFloat('AbilityChannelTime') + 300);
-                            }
-                            else {
-                                shiva.CastNoTarget();
-                            }
-                        }
-                    }						                                                 				         
+                    }								                                                 				         
                     }
 				}
             }

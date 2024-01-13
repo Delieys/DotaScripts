@@ -354,11 +354,8 @@ var Tinker_Spammer;
                         }
                     }
                 }
-				if (menu_RocketSpam.isKeyDown()) {
-					if (rocket && rocket.IsExist() && rocket.CanCast()) {
-						if (myHero.GetHeroesInRadius(1500, Enum.TeamType.TEAM_ENEMY).length > 0)						                       
-                            rocket.CanCast() && rearm.CanCast()
-							rearm.IsChannelling()					         
+				if (menu_RocketSpam.isKeyDown()) {								                       
+                            rocket.CanCast() && rearm.CanCast()					         
                     }
 				}
             }

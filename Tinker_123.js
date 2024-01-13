@@ -355,10 +355,8 @@ var Tinker_Spammer;
                     }
                 }
 				if (menu_RocketSpam.isKeyDown()) {
-					if (rocket && rocket.IsExist() && rocket.CanCast()) {
-                        if (enemyInRadius) {
-                            rocket.CanCast() && rearm.CanCast();
-                        }
+					if (rocket && rocket.IsExist() && rocket.CanCast()) {						                       
+                            rocket.CanCast() && rearm.CanCast();                    
                     }
 				}
             }

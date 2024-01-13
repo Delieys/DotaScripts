@@ -188,8 +188,7 @@ var Tinker_Spammer;
     let menu_CreepKey = Menu.AddKeyBind(path, 'Key Farm Creep', Enum.ButtonCode.KEY_NONE)
         .SetNameLocale('ru', 'Бинд фарма крипов')
         .SetTip('Will use shiva 3 times, not 4');
-	let menu_RocketSpam = Menu.AddKeyBind(path, 'Key', Enum.ButtonCode.KEY_NONE)
-        .SetNameLocale('ru', 'Бинд спама ракет');
+	
     let rocketFarm = Menu.AddToggle(path, 'Use Rockets with `Key Farm Creep`', false)
         .SetNameLocale('ru', 'Использовать ракеты с `Бинд фарма крипов`')
         .OnChange((state) => {

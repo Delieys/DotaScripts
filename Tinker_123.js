@@ -358,7 +358,25 @@ var Tinker_Spammer;
 					let blink = GetBlink();
                     if (rearm && rearm.IsExist() && rearm.CanCast() && !rearm.IsChannelling() && rocketUsed && !(blink && blink.IsExist() && CustomCanCast(blink))) {
                         rearm.CastNoTarget();
-                    }								                                                 				         
+                    }
+                    if (rearm.IsChannelling()) {
+                        let shiva = myHero.GetItem('item_shivas_guard', true);
+                        if (shiva && shiva.IsExist() && shiva.CanCast()) {
+                            if (useDoubleShiva) {
+                                setTimeout(() => {
+                                    if (shiva.CanCast())
+                                        shiva.CastNoTarget();
+                                }, 1000 * myHero.GetAbilityByIndex(5).GetLevelSpecialValueForFloat('AbilityChannelTime') - 300);
+                                setTimeout(() => {
+                                    if (shiva.CanCast())
+                                        shiva.CastNoTarget();
+                                }, 1000 * myHero.GetAbilityByIndex(5).GetLevelSpecialValueForFloat('AbilityChannelTime') + 300);
+                            }
+                            else {
+                                shiva.CastNoTarget();
+                            }
+                        }
+                    }						                                                 				         
                     }
 				}
             }

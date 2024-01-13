@@ -354,8 +354,10 @@ var Tinker_Spammer;
                         }
                     }
                 }
-				if (menu_RocketSpam.isKeyDown()) {								                       
-                            rocket.CanCast() && rearm.CanCast()					         
+				if (menu_RocketSpam.isKeyDown()) {
+					if (rearm && rearm.IsExist() && rearm.CanCast() && !rearm.IsChannelling() && rocketUsed && !(blink && blink.IsExist() && CustomCanCast(blink))) {
+                        rearm.CastNoTarget();
+					    }								                                                 				         
                     }
 				}
             }

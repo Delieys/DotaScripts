@@ -92,7 +92,6 @@
   \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
-/*asdasddddddddddddddddddddd*/
 let T_spammer = {};
 var Tinker_Spammer;
 (function (Tinker_Spammer) {

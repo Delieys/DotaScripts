@@ -359,7 +359,7 @@ var Tinker_Spammer;
 						if (myHero.GetHeroesInRadius(1500, Enum.TeamType.TEAM_ENEMY).length > 0)						                       
                             rocket.CanCast() && rearm.CanCast();
 						else {
-							rocketUsed = false;
+							rocketUsed = false && rearm.CanCast(null, null);
 						}                    
                     }
 				}
